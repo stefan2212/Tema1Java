@@ -12,7 +12,7 @@ public class MappingServlet extends HttpServlet {
     private PrintWriter out = null;
     private Map<String, String[]> data = null;
     private static int threadCounter = 0;
-    String filename = "";
+    private String filename = "";
 
     public MappingServlet() {
         data = new ConcurrentHashMap<String, String[]>();
@@ -25,8 +25,6 @@ public class MappingServlet extends HttpServlet {
         } else {
             this.writeIntoFile(request);
         }
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
