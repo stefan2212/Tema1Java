@@ -1,3 +1,5 @@
+package com.content;
+
 public interface IGenericContent {
     String getKey();
 

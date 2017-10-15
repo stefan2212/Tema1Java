@@ -1,3 +1,5 @@
+package com.content;
+
 public class Content implements IContent {
 
     private String key;
@@ -42,4 +44,7 @@ public class Content implements IContent {
     public String toString(){
         return this.key + " " + this.value + " " + this.method + " " + this.header + "\r\n";
     }
+
+
+
 }

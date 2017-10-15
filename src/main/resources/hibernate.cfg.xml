@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="connection.url">jdbc:postgresql://192.168.56.101/YonderFootball</property>
+        <property name="connection.url">jdbc:postgresql://192.168.56.101/java</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password"></property>
         <property name="format_sql">true</property>
@@ -13,10 +13,8 @@
         <property name="use_sql_comments">true</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.footballapp.spider.drive.entities.Player"/>
-        <mapping class="com.footballapp.spider.drive.entities.Profile"/>
-        <mapping class="com.footballapp.spider.drive.entities.Team"/>
-        <mapping class="com.footballapp.spider.drive.entities.Comptetition"/>
+        <mapping class = "com.dao.Entities.Category"/>
+        <mapping class="com.dao.Entities.Data"/>
 
     </session-factory>
 </hibernate-configuration>

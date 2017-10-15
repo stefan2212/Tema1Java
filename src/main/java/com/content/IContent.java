@@ -1,3 +1,5 @@
+package com.content;
+
 public interface IContent extends IGenericContent {
     String getMethod();
 

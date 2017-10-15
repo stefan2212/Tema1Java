@@ -1,5 +1,13 @@
+package com.servlets;
+
+import com.dao.CategoryDao;
+import com.dao.ICategoryDao;
+import com.content.Content;
+import com.content.IContent;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,8 +22,13 @@ public class MappingServlet extends HttpServlet {
     private static int threadCounter = 0;
     private String filename = "";
 
+
     public MappingServlet() {
         data = new ConcurrentHashMap<String, String[]>();
+    }
+
+    public void init() {
+
     }
 
     synchronized protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,7 +41,15 @@ public class MappingServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ICategoryDao dao = new CategoryDao();
+        //     dao.getAllCategories();
 
+        Cookie cookies[] = request.getCookies();
+        for (Cookie cookie : cookies) {
+            request.setAttribute("cookie", cookie);
+        }
+        request.setAttribute("name", dao.getAllCategories());
+        request.getRequestDispatcher("input.jsp").forward(request, response);
     }
 
     private void writeIntoFile(HttpServletRequest request) {
