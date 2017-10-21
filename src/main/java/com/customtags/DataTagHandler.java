@@ -6,9 +6,21 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 
 public class DataTagHandler  extends SimpleTagSupport {
-    public void doTag() throws JspException, IOException {
+    private String record;
+
+    public String getRecord() {
+        return record;
+    }
+
+    public void setRecord(String record) {
+        this.record = record;
+    }
+
+    public void doTag() throws JspException, IOException
+    {
         JspWriter out = getJspContext().getOut();
-        out.print("Hello World from Infoiasi!");
+        out.print(record);
+
     }
 
 }

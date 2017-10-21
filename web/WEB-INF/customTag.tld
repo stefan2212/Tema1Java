@@ -10,7 +10,10 @@
         <body-content>empty</body-content>
 
         <attribute>
-            <name>key</name>name>
+            <name>record</name>
+            <type>java.lang.String</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
         </attribute>
 
     </tag>

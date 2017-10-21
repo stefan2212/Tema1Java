@@ -14,6 +14,6 @@
 </head>
 <body>
 <h1> Tag Page Result</h1>
-    <ex:Record/>
+    <ex:Record record="${record}"/>
 </body>
 </html>

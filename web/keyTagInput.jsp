@@ -12,8 +12,11 @@
 </head>
 
 <body>
-<form action="/ResultServlet" method="POST">
-    <input type="text" name="tagKey"> <br>
+<form action="/tagServlet" method="POST">
+
+    Key <input type="text" name="tagKey"> <br>
+    <input type = "submit" value ="Submit">
+
 </form>
 
 </body>
