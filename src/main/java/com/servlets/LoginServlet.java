@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         if (verifyUser(username,password)){
             HttpSession session = request.getSession();
             session.setAttribute("username",username);
-            response.sendRedirect("/input.jsp");
+            response.sendRedirect("/MappingServlet");
           //  request.getRequestDispatcher("/input.jsp").forward(request, response);
         }
         else{
