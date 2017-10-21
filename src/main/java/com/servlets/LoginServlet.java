@@ -24,11 +24,13 @@ public class LoginServlet extends HttpServlet {
         if (verifyUser(username,password)){
             HttpSession session = request.getSession();
             session.setAttribute("username",username);
-            request.getRequestDispatcher("input.jsp").forward(request, response);
+            response.sendRedirect("/input.jsp");
+          //  request.getRequestDispatcher("/input.jsp").forward(request, response);
         }
         else{
             request.setAttribute("name", "Username or Password are invalid");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+
         }
     }
 
