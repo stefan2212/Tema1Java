@@ -1,4 +1,4 @@
-package com.dao;
+package com.dao.repository;
 
 import com.dao.Entities.Category;
 

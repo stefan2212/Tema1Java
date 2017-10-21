@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: StefanC
@@ -12,8 +13,14 @@
 </head>
 <body>
 <h1> I have been redirected here</h1>
-<h1> ${name.key}</h1>
-<h1> ${name.value}</h1>
-<h1> ${name.category.category}</h1>
+<table border="2px">
+    <c:forEach var="item" items="${name}">
+        <tr>
+            <td> ${item.key} </td>
+            <td> ${item.value} </td>
+            <td>${item.category.category}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

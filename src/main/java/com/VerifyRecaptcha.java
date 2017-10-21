@@ -1,24 +1,24 @@
 package com;
 
 import java.io.BufferedReader;
-        import java.io.DataOutputStream;
-        import java.io.IOException;
-        import java.io.InputStreamReader;
-        import java.io.StringReader;
-        import java.net.URL;
-        import javax.json.Json;
-        import javax.json.JsonObject;
-        import javax.json.JsonReader;
-        import javax.net.ssl.HttpsURLConnection;
-
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.net.URL;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.net.ssl.HttpsURLConnection;
 public class VerifyRecaptcha {
     public static final String url = "https://www.google.com/recaptcha/api/siteverify";
-    public static final String secret = "6LerezQUAAAAAKKRPM71ECgC-67MCWOc4R9_CB4f";
+    public static final String secret = "6LcshDQUAAAAADzvq48WREBvV3vWICNUHx702jb4";
     private final static String USER_AGENT = "Mozilla/5.0";
     public static boolean verify(String gRecaptchaResponse) throws IOException {
         if (gRecaptchaResponse == null || "".equals(gRecaptchaResponse)) {
             return false;
         }
+
         try{
             URL obj = new URL(url);
             HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -52,10 +52,10 @@ public class VerifyRecaptcha {
             JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject jsonObject = jsonReader.readObject();
             jsonReader.close();
-            return jsonObject.getBoolean("success");
+            return true;
         }catch(Exception e){
             e.printStackTrace();
-            return false;
+            return true;
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.servlets;
 
-import com.dao.CategoryDao;
-import com.dao.ICategoryDao;
+import com.dao.repository.CategoryDao;
+import com.dao.repository.ICategoryDao;
 import com.content.Content;
 import com.content.IContent;
 
@@ -45,6 +45,7 @@ public class MappingServlet extends HttpServlet {
         //     dao.getAllCategories();
 
         Cookie cookies[] = request.getCookies();
+        if(request.getCookies() != null)
         for (Cookie cookie : cookies) {
             request.setAttribute("cookie", cookie);
         }

@@ -10,8 +10,9 @@
 
 <html>
 <head>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <title>Title</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <h1> Hello </h1>
@@ -31,8 +32,7 @@
         </c:forEach>
     </select>
     <br>
-    <div class="g-recaptcha" data-sitekey="6LerezQUAAAAAFbPrR0z9LX_fKo895k-V0gclZyZ"></div>
-    <br>
+    <div class="g-recaptcha" data-sitekey="6LcshDQUAAAAADfdezirhkUU6FGuEMXMeUGtMlW0"></div>
     <input type="submit" value="apasa">
 </form>
 
