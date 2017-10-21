@@ -29,7 +29,6 @@ public class ResultServlet extends HttpServlet {
     private String categoryId;
     String gRecaptchaResponse;
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             int k = 0;
