@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-@WebFilter(filterName = "LoginFilter",urlPatterns = {"/input.jsp","/result.jsp","/MappingServlet"})
+@WebFilter(filterName = "LoginFilter",urlPatterns = {"/input.jsp","/result.jsp"})
 public class LogFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
