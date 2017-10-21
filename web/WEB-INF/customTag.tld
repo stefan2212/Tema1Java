@@ -12,6 +12,14 @@
         <attribute>
             <name>key</name>name>
         </attribute>
+    </tag>
 
+    <tag>
+        <name>datas</name>
+        <tag-class>com.customtags.DaoHandler</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>key</name>name>
+        </attribute>
     </tag>
 </taglib>
